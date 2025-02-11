@@ -90,10 +90,10 @@ void displayBST(BSTnode *node)
     int items[64] = {0}; // Max number of items in a binary tree of six levels.
     toArray(items, node, 0);
     int lineWidthOfDeepestLevel =
-        (int)pow(2.0, heightBST(node) - 1) * 4; // Two-digit numbers plus two spaces between.
+        (int)pow(2.0, heightBST(node)) * 4; // Two-digit numbers plus two spaces between.
     int spacesOnCurrentLevel = lineWidthOfDeepestLevel / 2;
     int itemsOnCurrentLevel = 1;
-    for (int level = 0; level < heightBST(node); level++)
+    for (int level = 0; level <= heightBST(node); level++)
     {
         int start = (int)pow(2.0, level) - 1; // Starting index in the array.
         for (int i = 0; i < itemsOnCurrentLevel; i++)

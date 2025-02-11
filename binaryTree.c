@@ -85,6 +85,10 @@ void toArray(int *items, const BSTnode *curr, int index)
 
 void displayBST(BSTnode *node)
 {
+    if (node == NULL){
+        printf("----- EMPTY TREE -----\n");
+        return;
+    }
     printf("----- TREE START -----\n");
     // If the tree is any taller than 6, it will be too wide to display horizontally.
     int items[64] = {0}; // Max number of items in a binary tree of six levels.
